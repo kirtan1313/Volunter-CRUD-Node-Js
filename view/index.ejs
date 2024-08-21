@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="d">
+        <div class="form-box">
+            <form class="form" action="/addvolunter" method="post">
+                <span class="title">Volunter Registration Form</span>
+                <div class="form-container">
+                    <input type="text" class="input" placeholder="Full Name" name="fname">
+                    <input type="email" class="input" placeholder="Email" name="email">
+                    <input type="tel" class="input" placeholder="Number" name="pnumber">
+                    <input type="text" class="input" placeholder="Skills" name="skill">
+                </div>
+                <button>Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="table-container">
+        <h1>Volunteer Registration Data</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Skills</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% volunter.forEach((data)=>{%>
+                    <tr>
+                        <td>
+                            <%= data.id %>
+                        </td>
+                        <td>
+                            <%= data.name %>
+                        </td>
+                        <td>
+                            <%= data.email %>
+                        </td>
+                        <td>
+                            <%= data.phoneNumber %>
+                        </td>
+                        <td>
+                            <%= data.skills %>
+                        </td>
+                        <td> <a href="/editVolunterRou/<%=data.id%>">Edit</a></td>
+                        <td><a href="/deleteVolunter/<%=data.id%>">Delete</a></td>
+                    </tr>
+                    <%})%>
+            </tbody>
+        </table>
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+<body>
+    <div class="d">
+        <div class="form-box">
+            <form class="form" action="/updateVolunter" method="post">
+                <span class="title">Volunter Registration Form</span>
+                <div class="form-container">
+                    <input type="text" class="input" placeholder="Full Name" name="id" value="<%= singleVolunter.id %>">
+                    <input type="text" class="input" placeholder="Full Name" name="name" value="<%= singleVolunter.name %>">
+                    <input type="email" class="input" placeholder="Email" name="email" value="<%= singleVolunter.email %>">
+                    <input type="tel" class="input" placeholder="Number" name="phoneNumber" value="<%= singleVolunter.phoneNumber %>">
+                    <input type="text" class="input" placeholder="Skills" name="skills" value="<%= singleVolunter.skills %>">
+                </div>
+                <button>Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
